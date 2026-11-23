@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halloween Image Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1c1028;
+            color: white;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 { color: #ff7518; }
+        p { color: #f0e6ff; font-size: 17px; }
+        img {
+            width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+        #info {
+            background: #30203f;
+            border: 2px solid #ff7518;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 550px;
+        }
+        #info h2 { color: #ffb347; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Scary Halloween World 🎃</h1>
+    <p>Click on the pumpkins, ghosts, or center table to discover more!</p>
+
+    <img src="hallowen.jpg" alt="Halloween table with pumpkins and ghosts"
+         usemap="#halloweenmap">
+
+    <map name="halloweenmap">
+        <area shape="rect" coords="143,210,298,121"
+              href="#info" alt="Table"
+              onclick="document.getElementById('title').textContent='Halloween Table 🕯️'; document.getElementById('description').textContent='The Halloween table is decorated with spooky objects for a Halloween celebration.';">
+
+        <area shape="poly"
+              coords="167,31,173,96,143,145,138,147,143,145,114,136,133,30"
+              href="#info" alt="Left Ghost"
+              onclick="document.getElementById('title').textContent='Left Ghost 👻'; document.getElementById('description').textContent='Ghosts are popular Halloween symbols representing mysterious spirits in spooky stories.';">
+
+        <area shape="poly"
+              coords="255,97,255,26,306,23,313,94,320,144,308,155,267,104"
+              href="#info" alt="Right Ghost"
+              onclick="document.getElementById('title').textContent='Right Ghost 👻'; document.getElementById('description').textContent='Ghosts are popular Halloween symbols representing mysterious spirits in spooky stories.';">
+
+        <area shape="circle" coords="200,104,14"
+              href="#info" alt="Top Table Pumpkin"
+              onclick="document.getElementById('title').textContent='Top Table Pumpkin 🎃'; document.getElementById('description').textContent='This small pumpkin adds a festive Halloween touch to the table.';">
+
+        <area shape="circle" coords="346,196,41"
+              href="#info" alt="Right Pumpkin"
+              onclick="document.getElementById('title').textContent='Right Pumpkin 🎃'; document.getElementById('description').textContent='Pumpkins are carved into jack-o-lanterns with scary faces as a Halloween tradition.';">
+
+        <area shape="circle" coords="103,208,35"
+              href="#info" alt="Left Pumpkin"
+              onclick="document.getElementById('title').textContent='Left Pumpkin 🎃'; document.getElementById('description').textContent='Pumpkins are a popular decoration during Halloween.';">
+    </map>
+
+    <div id="info">
+        <h2 id="title">Halloween Information</h2>
+        <p id="description">Click on an object in the image to learn more about it.</p>
+    </div>
+
+</body>
+</html>
+

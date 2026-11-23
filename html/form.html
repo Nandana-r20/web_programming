@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>registration form</title>
+</title>
+<body>
+<center>
+<h1>Student Registration form</h1>
+</center>
+<h3><u> personal information</u></h3>
+
+<form>
+<label>Student name:</label>
+<input type="text" name="name"><br><br>
+
+<label>Dob:</label>
+<input type="date" name="dob"><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female 
+<input type="radio" name="other" value="other"> other<br><br>
+
+<label>Address:</label><br>
+<textarea name="address" ></textarea><br><br>
+
+<h3> contact information</h3>
+<label>Phone:</label>
+<input type="tel" name="phone"><br><br>
+
+<label>Email:</label>
+<input type="email" name="email"><br><br>
+
+<label>Educational Qualification:</label>
+        <select name="qualification">
+            <option>Select Qualification</option>
+            <option>10th</option>
+            <option>12th</option>
+            <option>Diploma</option>
+            <option>Degree</option>
+            <option>Post Graduation</option>
+        </select>
+        <br><br>
+
+<label>Select Course:</label>
+        <select name="course">
+            <option>Select Course</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>B.Com</option>
+            <option>B.Sc Computer Science</option>
+            <option>MCA</option>
+        </select>
+        <br><br>
+
+<label>Password:</label>
+        <input type="password" id="password" required><br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" required><br><br>
+        
+<label>Upload Photo/Document:</label>
+        <input type="file" name="file"><br><br>
+
+<label>Date of TC:</label>
+        <input type="date" name="tc_date"><br><br>
+
+ <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halloween Image Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1028;
+            color: white;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #ff7518;
+        }
+
+        p {
+            color: #f0e6ff;
+            font-size: 17px;
+        }
+
+        img {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #ff7518;
+            border-radius: 10px;
+        }
+
+        #info {
+            background-color: #30203f;
+            border: 2px solid #ff7518;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 550px;
+        }
+
+        #info h2 {
+            color: #ffb347;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to the Scary Halloween World 🎃</h1>
+
+    <p>Click on the pumpkins, ghosts, or center table to discover more!</p>
+
+    <img src="hallowen.jpg"
+         alt="Halloween table with pumpkins and ghosts"
+         usemap="#halloweenmap"
+         width="600"
+         height="400">
+
+    <map name="halloweenmap">
+
+        <area shape="circle"
+              coords="180,250,22"
+              href="#info"
+              alt="Left Halloween Pumpkin"
+              onclick="showInfo('Halloween Pumpkin 🎃', 'Pumpkins are carved into jack-o-lanterns and decorated with scary faces as a popular Halloween tradition.'); return false;">
+
+        <area shape="circle"
+              coords="450,255,30"
+              href="#info"
+              alt="Right Halloween Pumpkin"
+              onclick="showInfo('Halloween Pumpkin 🎃', 'Pumpkins are carved into jack-o-lanterns and decorated with scary faces as a popular Halloween tradition.'); return false;">
+
+        <area shape="poly"
+              coords="200,100,45,85,70,90,90,110,95,140,90,165,100,190,85,210,65,205,50,215,30,205,15,185,20,160,10,135,15,115"
+              href="#info"
+              alt="Left Halloween Ghost"
+              onclick="showInfo('Halloween Ghost 👻', 'Ghosts are popular Halloween symbols that represent mysterious spirits in spooky stories and decorations.'); return false;">
+
+        <area shape="poly"
+              coords="330,50,370,40,405,55,435,80,450,115,450,155,455,180,445,210,425,230,400,235,375,245,350,235,325,215,315,190,320,160,310,125,315,90"
+              href="#info"
+              alt="Right Halloween Ghost"
+              onclick="showInfo('Halloween Ghost 👻', 'Ghosts are popular Halloween symbols that represent mysterious spirits in spooky stories and decorations.'); return false;">
+
+        <area shape="rect"
+              coords="100,200,440,290"
+              href="#info"
+              alt="Halloween Table"
+              onclick="showInfo('Halloween Table 🕯️', 'The Halloween table is decorated with spooky objects and festive decorations for a scary Halloween celebration.'); return false;">
+
+    </map>
+
+    <div id="info">
+        <h2 id="title">Halloween Information</h2>
+        <p id="description">
+            Click on an object in the image to learn more about it.
+        </p>
+    </div>
+
+    <script>
+        function showInfo(title, description) {
+            document.getElementById("title").innerHTML = title;
+            document.getElementById("description").innerHTML = description;
+        }
+    </script>
+
+</body>
+</html>
+
