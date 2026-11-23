@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Turn ON/OFF Bulb</title>
+</head>
+<body style="text-align:center;margin-top: 50px;">
+<h2>Turn ON/OFF Bulb</h2>
+<div>
+<img id="bulb"src="bulb_off.png" alt="light" style="width:500px; height:auto;">
+</div>
+<br>
+<button onclick="turnOn()">Turn On</button>
+<button onclick="turnOff()">Turn Off</button>
+<script>
+function turnOn() {
+document.getElementById('bulb').src='bulb_on.png';
+}
+function turnOff() {
+document.getElementById('bulb').src='bulb_off.png';
+}
+</script>
+</body>
+</html>
+
+
+
+
+
